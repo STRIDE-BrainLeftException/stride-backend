@@ -31,7 +31,7 @@ SECRET_KEY = "django-insecure-d@yo+rp=z1m_v!de$&t3z_aj-e%rh%k*pmp%f5uflr0fscrsa(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [*(os.getenv("ALLOWED_HOSTS").split(",")), "localhost"]
+ALLOWED_HOSTS = [*(os.getenv("ALLOWED_HOSTS", "").split(",")), "localhost"]
 
 # Application definition
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "django_extensions",
     "django.contrib.staticfiles",
     "cms",
     "rest_framework",

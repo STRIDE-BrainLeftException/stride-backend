@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.functional import cached_property
 
+
 class GalacticUser(AbstractUser):
     galactic_id = models.CharField(max_length=256, null=True)
 
@@ -45,8 +46,12 @@ class Package(models.Model):
 
 class Booking(models.Model):
     user = models.ForeignKey(GalacticUser, on_delete=models.CASCADE)
-    start_planet = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name="start_planet")
-    end_planet = models.ForeignKey(Planet, on_delete=models.CASCADE, related_name="end_planet")
+    start_planet = models.ForeignKey(
+        Planet, on_delete=models.CASCADE, related_name="start_planet"
+    )
+    end_planet = models.ForeignKey(
+        Planet, on_delete=models.CASCADE, related_name="end_planet"
+    )
     package = models.ForeignKey(Package, on_delete=models.CASCADE)
     ship_type = models.ForeignKey(ShipType, on_delete=models.CASCADE)
     seat_count = models.IntegerField()
@@ -64,7 +69,7 @@ class Booking(models.Model):
     @cached_property
     def tax_price(self):
         return self.calculated_price * self.end_planet.planet_tax_rate
-    
+
     @cached_property
     def total_price(self):
         return self.calculated_price + self.tax_price
