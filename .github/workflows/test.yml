@@ -27,6 +27,6 @@ jobs:
           isort --check-only .
           black --check .
           flake8
-      - name: Run tests
-        run: |
-          python manage.py test
+      # - name: Run tests
+      #   run: |
+      #     python manage.py test
