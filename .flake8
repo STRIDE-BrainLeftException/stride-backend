@@ -1,0 +1,13 @@
+[flake8]
+exclude =
+    # __init__.py file imports raise warnings about unused imports
+    __init__.py
+    # Ignore migrations
+    */migrations/*
+    # Ignore venv
+    venv/*
+    
+# Let black handle the line lengths
+max-line-length = 300
+# but black won't touch comments, so flake8 can still handle those
+max-doc-length = 100
