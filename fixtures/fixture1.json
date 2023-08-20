@@ -1,0 +1,899 @@
+[
+    {
+        "model": "cms.galacticuser",
+        "pk": 1,
+        "fields": {
+          "password": "pbkdf2_sha256$600000$WGvLM2Zdbuvz6oag93NyIU$TmC3rLssTTiNmZRa3/vSWascmh9Dz22aUEdqdjmpQs8=",
+          "last_login": "2023-08-20T13:07:32.869Z",
+          "is_superuser": false,
+          "username": "foo",
+          "first_name": "",
+          "last_name": "",
+          "email": "foo@bar.com",
+          "is_staff": false,
+          "is_active": true,
+          "date_joined": "2023-08-20T12:53:47.751Z",
+          "galactic_id": "pbkdf2_sha256$100000$saltsaltsaltsalt$ziAa37x/e4N/N5fsmPNbWLJzlzPUkWfL4ao+3yX64G8=",
+          "groups": [],
+          "user_permissions": []
+        }
+      },
+    {
+        "model": "cms.planet",
+        "pk": 1,
+        "fields": {
+            "name": "Earth",
+            "x_coord": 0,
+            "y_coord": 0,
+            "z_coord": 0,
+            "planet_tax_rate": 0.15,
+            "description": {
+                "type": "terrestrial",
+                "population": "7.9 billion"
+            }
+        }
+    },
+    {
+        "model": "cms.galacticuser",
+        "pk": 3,
+        "fields": {
+          "password": "pbkdf2_sha256$600000$WGvLM2Zdbuvz6oag93NyIU$TmC3rLssTTiNmZRa3/vSWascmh9Dz22aUEdqdjmpQs8=",
+          "last_login": "2023-08-20T13:07:12.869Z",
+          "is_superuser": false,
+          "username": "foo2",
+          "first_name": "",
+          "last_name": "",
+          "email": "foo2@bar.com",
+          "is_staff": false,
+          "is_active": true,
+          "date_joined": "2023-08-20T12:53:59.751Z",
+          "galactic_id": "pbkdf2_sha256$100000$saltsaltsaltsalt$xmyilm+LsTXimESGfx/cVyUCgjzZLprD9jp1VOaJwdk=",
+          "groups": [],
+          "user_permissions": []
+        }
+      },
+      {
+        "model": "cms.galacticuser",
+        "pk": 4,
+        "fields": {
+          "password": "pbkdf2_sha256$600000$WGvLM2Zdbuvz6oag93NyIU$TmC3rLssTTiNmZRa3/vSWascmh9Dz22aUEdqdjmpQs8=",
+          "last_login": "2023-08-20T13:07:59.869Z",
+          "is_superuser": false,
+          "username": "foo3",
+          "first_name": "",
+          "last_name": "",
+          "email": "foo3@bar.com",
+          "is_staff": false,
+          "is_active": true,
+          "date_joined": "2023-08-20T12:55:55.751Z",
+          "galactic_id": "pbkdf2_sha256$100000$saltsaltsaltsalt$qRO+I35Hy1bRHgg0NA3IxwTUkPHj8HoJ7azkL6bLcZQ=",
+          "groups": [],
+          "user_permissions": []
+        }
+      },
+    {
+        "model": "cms.planet",
+        "pk": 2,
+        "fields": {
+            "name": "Mars",
+            "x_coord": 1,
+            "y_coord": 0,
+            "z_coord": 0,
+            "planet_tax_rate": 0.12,
+            "description": {
+                "type": "terrestrial",
+                "population": "6.9 million"
+            }
+        }
+    },
+    {
+        "model": "cms.planet",
+        "pk": 3,
+        "fields": {
+            "name": "Jupiter",
+            "x_coord": 3,
+            "y_coord": 2,
+            "z_coord": -1,
+            "planet_tax_rate": 0.08,
+            "description": {
+                "type": "gas giant",
+                "moons": 79
+            }
+        }
+    },
+    {
+        "model": "cms.planet",
+        "pk": 4,
+        "fields": {
+            "name": "Venus",
+            "x_coord": -0.5,
+            "y_coord": 0.8,
+            "z_coord": 0.3,
+            "planet_tax_rate": 0.18,
+            "description": {
+                "type": "terrestrial",
+                "atmosphere": "hot and toxic"
+            }
+        }
+    },
+    {
+        "model": "cms.planet",
+        "pk": 5,
+        "fields": {
+            "name": "Saturn",
+            "x_coord": -2,
+            "y_coord": -3,
+            "z_coord": 1,
+            "planet_tax_rate": 0.1,
+            "description": {
+                "type": "gas giant",
+                "ring_system": true
+            }
+        }
+    },
+    {
+        "model": "cms.planet",
+        "pk": 6,
+        "fields": {
+            "name": "Mercury",
+            "x_coord": 0.7,
+            "y_coord": -0.4,
+            "z_coord": 0,
+            "planet_tax_rate": 0.16,
+            "description": {
+                "type": "terrestrial",
+                "surface": "heavily cratered"
+            }
+        }
+    },
+    {
+        "model": "cms.planet",
+        "pk": 7,
+        "fields": {
+            "name": "Uranus",
+            "x_coord": 5,
+            "y_coord": 4,
+            "z_coord": 2,
+            "planet_tax_rate": 0.09,
+            "description": {
+                "type": "ice giant",
+                "tilted_axis": true
+            }
+        }
+    },
+    {
+        "model": "cms.planet",
+        "pk": 8,
+        "fields": {
+            "name": "Neptune",
+            "x_coord": 6,
+            "y_coord": -5,
+            "z_coord": -2,
+            "planet_tax_rate": 0.07,
+            "description": {
+                "type": "ice giant",
+                "blue_color": true
+            }
+        }
+    },
+    {
+        "model": "cms.planet",
+        "pk": 9,
+        "fields": {
+            "name": "Pluto",
+            "x_coord": -7,
+            "y_coord": 6,
+            "z_coord": 3,
+            "planet_tax_rate": 0.05,
+            "description": {
+                "type": "dwarf planet",
+                "status": "dwarf planet"
+            }
+        }
+    },
+    {
+        "model": "cms.planet",
+        "pk": 10,
+        "fields": {
+            "name": "Ceres",
+            "x_coord": 2,
+            "y_coord": -8,
+            "z_coord": 1,
+            "planet_tax_rate": 0.06,
+            "description": {
+                "type": "dwarf planet",
+                "asteroid_belt": true
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 1,
+        "fields": {
+            "name": "Scout Ship",
+            "price_multiplier": 1.2,
+            "base_price": 1000000.0,
+            "description": {
+                "class": "Exploration",
+                "capacity": "2 crew members"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 2,
+        "fields": {
+            "name": "Cargo Transporter",
+            "price_multiplier": 1.5,
+            "base_price": 1500000.0,
+            "description": {
+                "class": "Transport",
+                "capacity": "1000 tons cargo"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 3,
+        "fields": {
+            "name": "Fighter Ship",
+            "price_multiplier": 1.8,
+            "base_price": 2000000.0,
+            "description": {
+                "class": "Combat",
+                "weapons": "Laser cannons, missiles"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 4,
+        "fields": {
+            "name": "Explorer Vessel",
+            "price_multiplier": 1.4,
+            "base_price": 1800000.0,
+            "description": {
+                "class": "Exploration",
+                "features": "Advanced scanning equipment"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 5,
+        "fields": {
+            "name": "Mining Ship",
+            "price_multiplier": 1.6,
+            "base_price": 2200000.0,
+            "description": {
+                "class": "Mining",
+                "equipment": "Drills, extractors"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 6,
+        "fields": {
+            "name": "Luxury Yacht",
+            "price_multiplier": 2.0,
+            "base_price": 3000000.0,
+            "description": {
+                "class": "Leisure",
+                "amenities": "Spa, luxury cabins"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 7,
+        "fields": {
+            "name": "Interceptor",
+            "price_multiplier": 1.9,
+            "base_price": 2500000.0,
+            "description": {
+                "class": "Combat",
+                "speed": "High sublight speed"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 8,
+        "fields": {
+            "name": "Survey Ship",
+            "price_multiplier": 1.3,
+            "base_price": 1700000.0,
+            "description": {
+                "class": "Exploration",
+                "scanners": "Planetary analysis"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 9,
+        "fields": {
+            "name": "Freighter",
+            "price_multiplier": 1.7,
+            "base_price": 2300000.0,
+            "description": {
+                "class": "Transport",
+                "storage": "Modular cargo bays"
+            }
+        }
+    },
+    {
+        "model": "cms.shiptype",
+        "pk": 10,
+        "fields": {
+            "name": "Battleship",
+            "price_multiplier": 2.5,
+            "base_price": 5000000.0,
+            "description": {
+                "class": "Combat",
+                "firepower": "Heavy artillery, shields"
+            }
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 1,
+        "fields": {
+            "name": "Krypium",
+            "description": {
+                "features": "Basic travel package",
+                "perks": "Standard amenities"
+            },
+            "price_multiplier": 1.0,
+            "base_price": 100000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 2,
+        "fields": {
+            "name": "Omium",
+            "description": {
+                "features": "Enhanced travel experience",
+                "perks": "Premium amenities, priority boarding"
+            },
+            "price_multiplier": 1.2,
+            "base_price": 150000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 3,
+        "fields": {
+            "name": "Terynium",
+            "description": {
+                "features": "Ultimate luxury package",
+                "perks": "Exclusive amenities, personal concierge"
+            },
+            "price_multiplier": 1.5,
+            "base_price": 250000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 4,
+        "fields": {
+            "name": "Voyager",
+            "description": {
+                "features": "Interstellar journey",
+                "perks": "Zero-gravity lounge, observation deck"
+            },
+            "price_multiplier": 1.4,
+            "base_price": 200000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 5,
+        "fields": {
+            "name": "Adventurer",
+            "description": {
+                "features": "For the thrill-seekers",
+                "perks": "Guided spacewalks, space wildlife tour"
+            },
+            "price_multiplier": 1.3,
+            "base_price": 180000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 6,
+        "fields": {
+            "name": "Celestial",
+            "description": {
+                "features": "Stargazing and cosmic events",
+                "perks": "Astronomy workshops, meteor shower viewing"
+            },
+            "price_multiplier": 1.1,
+            "base_price": 120000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 7,
+        "fields": {
+            "name": "Nomad",
+            "description": {
+                "features": "Space exploration",
+                "perks": "Planet hopping, cultural experiences"
+            },
+            "price_multiplier": 1.6,
+            "base_price": 220000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 8,
+        "fields": {
+            "name": "Solstice",
+            "description": {
+                "features": "Equinox and solstice experiences",
+                "perks": "Specialized celestial events"
+            },
+            "price_multiplier": 1.15,
+            "base_price": 130000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 9,
+        "fields": {
+            "name": "Nebula",
+            "description": {
+                "features": "Deep space voyage",
+                "perks": "Astronomer-guided tours"
+            },
+            "price_multiplier": 1.25,
+            "base_price": 170000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 10,
+        "fields": {
+            "name": "Galactic",
+            "description": {
+                "features": "Galactic tour",
+                "perks": "Cross-galaxy itinerary"
+            },
+            "price_multiplier": 1.8,
+            "base_price": 280000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 1,
+        "fields": {
+            "name": "Krypium",
+            "description": {
+                "features": "Basic travel package",
+                "perks": "Standard amenities"
+            },
+            "price_multiplier": 1.0,
+            "base_price": 100000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 2,
+        "fields": {
+            "name": "Omium",
+            "description": {
+                "features": "Enhanced travel experience",
+                "perks": "Premium amenities, priority boarding"
+            },
+            "price_multiplier": 1.2,
+            "base_price": 150000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 3,
+        "fields": {
+            "name": "Terynium",
+            "description": {
+                "features": "Ultimate luxury package",
+                "perks": "Exclusive amenities, personal concierge"
+            },
+            "price_multiplier": 1.5,
+            "base_price": 250000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 4,
+        "fields": {
+            "name": "Voyager",
+            "description": {
+                "features": "Interstellar journey",
+                "perks": "Zero-gravity lounge, observation deck"
+            },
+            "price_multiplier": 1.4,
+            "base_price": 200000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 5,
+        "fields": {
+            "name": "Adventurer",
+            "description": {
+                "features": "For the thrill-seekers",
+                "perks": "Guided spacewalks, space wildlife tour"
+            },
+            "price_multiplier": 1.3,
+            "base_price": 180000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 6,
+        "fields": {
+            "name": "Celestial",
+            "description": {
+                "features": "Stargazing and cosmic events",
+                "perks": "Astronomy workshops, meteor shower viewing"
+            },
+            "price_multiplier": 1.1,
+            "base_price": 120000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 7,
+        "fields": {
+            "name": "Nomad",
+            "description": {
+                "features": "Space exploration",
+                "perks": "Planet hopping, cultural experiences"
+            },
+            "price_multiplier": 1.6,
+            "base_price": 220000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 8,
+        "fields": {
+            "name": "Solstice",
+            "description": {
+                "features": "Equinox and solstice experiences",
+                "perks": "Specialized celestial events"
+            },
+            "price_multiplier": 1.15,
+            "base_price": 130000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 9,
+        "fields": {
+            "name": "Nebula",
+            "description": {
+                "features": "Deep space voyage",
+                "perks": "Astronomer-guided tours"
+            },
+            "price_multiplier": 1.25,
+            "base_price": 170000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 10,
+        "fields": {
+            "name": "Galactic",
+            "description": {
+                "features": "Galactic tour",
+                "perks": "Cross-galaxy itinerary"
+            },
+            "price_multiplier": 1.8,
+            "base_price": 280000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 1,
+        "fields": {
+            "name": "Krypium",
+            "description": {
+                "features": "Basic travel package",
+                "perks": "Standard amenities"
+            },
+            "price_multiplier": 1.0,
+            "base_price": 100000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 2,
+        "fields": {
+            "name": "Omium",
+            "description": {
+                "features": "Enhanced travel experience",
+                "perks": "Premium amenities, priority boarding"
+            },
+            "price_multiplier": 1.2,
+            "base_price": 150000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 3,
+        "fields": {
+            "name": "Terynium",
+            "description": {
+                "features": "Ultimate luxury package",
+                "perks": "Exclusive amenities, personal concierge"
+            },
+            "price_multiplier": 1.5,
+            "base_price": 250000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 4,
+        "fields": {
+            "name": "Voyager",
+            "description": {
+                "features": "Interstellar journey",
+                "perks": "Zero-gravity lounge, observation deck"
+            },
+            "price_multiplier": 1.4,
+            "base_price": 200000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 5,
+        "fields": {
+            "name": "Adventurer",
+            "description": {
+                "features": "For the thrill-seekers",
+                "perks": "Guided spacewalks, space wildlife tour"
+            },
+            "price_multiplier": 1.3,
+            "base_price": 180000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 6,
+        "fields": {
+            "name": "Celestial",
+            "description": {
+                "features": "Stargazing and cosmic events",
+                "perks": "Astronomy workshops, meteor shower viewing"
+            },
+            "price_multiplier": 1.1,
+            "base_price": 120000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 7,
+        "fields": {
+            "name": "Nomad",
+            "description": {
+                "features": "Space exploration",
+                "perks": "Planet hopping, cultural experiences"
+            },
+            "price_multiplier": 1.6,
+            "base_price": 220000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 8,
+        "fields": {
+            "name": "Solstice",
+            "description": {
+                "features": "Equinox and solstice experiences",
+                "perks": "Specialized celestial events"
+            },
+            "price_multiplier": 1.15,
+            "base_price": 130000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 9,
+        "fields": {
+            "name": "Nebula",
+            "description": {
+                "features": "Deep space voyage",
+                "perks": "Astronomer-guided tours"
+            },
+            "price_multiplier": 1.25,
+            "base_price": 170000.0
+        }
+    },
+    {
+        "model": "cms.package",
+        "pk": 10,
+        "fields": {
+            "name": "Galactic",
+            "description": {
+                "features": "Galactic tour",
+                "perks": "Cross-galaxy itinerary"
+            },
+            "price_multiplier": 1.8,
+            "base_price": 280000.0
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "start_planet": 3,
+            "end_planet": 7,
+            "package_id": 2,
+            "ship_type": 2,
+            "seat_count": 4,
+            "journey_date": "2202-05-15",
+            "booking_price": 1200000.0,
+            "details": {
+                "extras": "Private cabin"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "start_planet": 2,
+            "end_planet": 8,
+            "package_id": 2,
+            "ship_type": 5,
+            "seat_count": 8,
+            "journey_date": "2203-07-10",
+            "booking_price": 1800000.0,
+            "details": {
+                "extras": "VIP lounge access"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 3,
+        "fields": {
+            "user": 1,
+            "start_planet": 1,
+            "end_planet": 10,
+            "package_id": 2,
+            "ship_type": 1,
+            "seat_count": 3,
+            "journey_date": "2204-09-22",
+            "booking_price": 900000.0,
+            "details": {
+                "extras": "In-flight entertainment"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 4,
+        "fields": {
+            "user": 2,
+            "start_planet": 5,
+            "end_planet": 9,
+            "package_id": 2,
+            "ship_type": 3,
+            "seat_count": 12,
+            "journey_date": "2205-02-18",
+            "booking_price": 2400000.0,
+            "details": {
+                "extras": "Gym access"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 5,
+        "fields": {
+            "user": 3,
+            "start_planet": 4,
+            "end_planet": 6,
+            "package_id": 2,
+            "ship_type": 6,
+            "seat_count": 5,
+            "journey_date": "2206-06-30",
+            "booking_price": 1500000.0,
+            "details": {
+                "extras": "Fine dining"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 6,
+        "fields": {
+            "user": 3,
+            "start_planet": 7,
+            "end_planet": 10,
+            "package_id": 2,
+            "ship_type": 4,
+            "seat_count": 7,
+            "journey_date": "2207-10-12",
+            "booking_price": 2100000.0,
+            "details": {
+                "extras": "Spa treatments"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 7,
+        "fields": {
+            "user": 3,
+            "start_planet": 8,
+            "end_planet": 5,
+            "package_id": 2,
+            "ship_type": 7,
+            "seat_count": 15,
+            "journey_date": "2208-12-05",
+            "booking_price": 2700000.0,
+            "details": {
+                "extras": "Nightclub access"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 8,
+        "fields": {
+            "user": 4,
+            "start_planet": 9,
+            "end_planet": 4,
+            "package_id": 2,
+            "ship_type": 9,
+            "seat_count": 6,
+            "journey_date": "2209-04-24",
+            "booking_price": 1600000.0,
+            "details": {
+                "extras": "Lectures by space experts"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 9,
+        "fields": {
+            "user": 4,
+            "start_planet": 10,
+            "end_planet": 3,
+            "package_id": 2,
+            "ship_type": 8,
+            "seat_count": 10,
+            "journey_date": "2210-08-07",
+            "booking_price": 2000000.0,
+            "details": {
+                "extras": "Art gallery"
+            }
+        }
+    },
+    {
+        "model": "cms.booking",
+        "pk": 10,
+        "fields": {
+            "user": 4,
+            "start_planet": 6,
+            "end_planet": 2,
+            "package_id": 2,
+            "ship_type": 10,
+            "seat_count": 18,
+            "journey_date": "2211-11-15",
+            "booking_price": 3000000.0,
+            "details": {
+                "extras": "Private viewing deck"
+            }
+        }
+    }
+]

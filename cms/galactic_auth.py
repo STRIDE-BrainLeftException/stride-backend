@@ -7,6 +7,9 @@ from cms.models import GalacticUser
 class FixedPBKDF2Hasher(PBKDF2PasswordHasher):
     """
     Override PBKDF2PasswordHasher to use a fixed salt value.
+
+    This is not secure, but it is suitable under the assumption that the galactic_ids we are
+    using are secure by themselves anyway.
     """
 
     iterations = 100000
