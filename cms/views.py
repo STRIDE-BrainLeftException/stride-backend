@@ -1,9 +1,22 @@
-from rest_framework.viewsets import ModelViewSet
+from django.contrib.auth import authenticate
+from rest_framework.views import APIView, Response
+from rest_framework_simplejwt.tokens import RefreshToken
 
-from cms.models import User
-from cms.serializers import UserSerializer
 
+class GalactiveUserLoginView(APIView):
+    def post(self, request):
+        galactic_id = request.data.get("galactic_id")
 
-class UserViewSet(ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+        user = authenticate(request, token=galactic_id)
+        if user is None:
+            return Response({"error": "Invalid Credentials"}, status=400)
+
+        refresh = RefreshToken.for_user(user)
+
+        return Response(
+            {
+                "refresh": str(refresh),
+                "access": str(refresh.access_token),
+            },
+            status=200,
+        )
