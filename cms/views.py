@@ -6,6 +6,7 @@ from rest_framework import viewsets, permissions
 from cms.models import Booking, TumorDetection
 from cms.serializers import TumorDetectionSerializer
 from rest_framework.decorators import action
+from .ml_utils import perform_detection
 
 
 class GalactiveUserLoginView(APIView):
@@ -63,25 +64,28 @@ class TumorDetectionViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=["POST"])
     def run_detection(self, request, *args, **kwargs):
+        file = request.data.get("file")
         try:
-            serializer = TumorDetectionSerializer(data=request.data)
-            if serializer.is_valid():
-                serializer.save()
-                tumor_detection = TumorDetection.objects.get(
-                    id=serializer.data.get("id")
-                )
-                tumor_detection_id = tumor_detection.id
-                detection_class = tumor_detection.detection_class
-                return Response(
-                    {
-                        "success": True,
-                        "result": True,
-                        "tumor_detection_id": tumor_detection_id,
-                        "detection_class": detection_class,
-                    }
-                )
-            return Response({"success": True, "result": True})
-        except:
+            detection_class = perform_detection(file)
+            detection = TumorDetection.objects.create(
+                detection_class=detection_class, file=file
+            )
+            tumor_detection_id = detection.id
+            serializer = self.get_serializer(
+                data={"detection_class": detection_class, "file": file}
+            )
+            serializer.is_valid(raise_exception=True)
+            serializer.save()
+            return Response(
+                {
+                    "success": True,
+                    "result": True,
+                    "tumor_detection_id": tumor_detection_id,
+                }
+            )
+        except Exception as e:
+            # print exception
+            print(e)
             return Response({"success": False, "result": True})
 
     @action(detail=True, methods=["POST"])

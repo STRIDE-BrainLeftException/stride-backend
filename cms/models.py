@@ -76,7 +76,6 @@ class Booking(models.Model):
 
 
 class TumorDetection(models.Model):
-    path = models.CharField(max_length=1024)
     detection_class = models.CharField(max_length=256)
     trained = models.BooleanField(default=False)
     created_datetime = models.DateTimeField(auto_now_add=True)

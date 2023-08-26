@@ -7,4 +7,4 @@ class TumorDetectionSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = TumorDetection
-        fields = "__all__"
+        exclude = ["trained", "detection_class"]
