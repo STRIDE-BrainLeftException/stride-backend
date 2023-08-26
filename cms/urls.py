@@ -1,10 +1,10 @@
 from django.urls import include, path
 from rest_framework import routers
 
-from cms.views import GalactiveUserLoginView, PriceCalculationView
+from cms.views import GalactiveUserLoginView, PriceCalculationView, TumorDetectionViewSet
 
 router = routers.DefaultRouter()
-# router.register(r"users", UserViewSet)
+router.register(r"tumor_detection", TumorDetectionViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),

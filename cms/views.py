@@ -1,8 +1,11 @@
 from django.contrib.auth import authenticate
 from rest_framework.views import APIView, Response
 from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework import viewsets, permissions
 
-from cms.models import Booking
+from cms.models import Booking, TumorDetection
+from cms.serializers import TumorDetectionSerializer
+from rest_framework.decorators import action
 
 
 class GalactiveUserLoginView(APIView):
@@ -51,3 +54,25 @@ class PriceCalculationView(APIView):
             )
         except Exception as e:
             return Response({"error": str(e)}, status=400)
+        
+    
+class TumorDetectionViewSet(viewsets.ModelViewSet):
+    queryset = TumorDetection.objects.all().order_by('-created_datetime')
+    serializer_class = TumorDetectionSerializer
+    permission_classes = [permissions.AllowAny]
+
+
+    @action(detail=False, methods=["POST"])
+    def run_detection(self,request,*args, **kwargs):
+        try:
+             return Response({"success":True, "result": True})
+        except:
+            return Response({"success":False, "result": True})
+    
+    @action(detail=True, methods=["POST"])
+    def provide_detected_feedback(self,request,*args, **kwargs):
+        try:
+             return Response({"success":True, "result": True})
+        except:
+            return Response({"success":False, "result": True})
+

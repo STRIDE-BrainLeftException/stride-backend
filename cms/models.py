@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.functional import cached_property
 
 
+
 class GalacticUser(AbstractUser):
     galactic_id = models.CharField(max_length=256, null=True)
 
@@ -73,3 +74,11 @@ class Booking(models.Model):
     @cached_property
     def total_price(self):
         return self.calculated_price + self.tax_price
+    
+class TumorDetection(models.Model):
+    path = models.CharField(max_length=1024)
+    detection_class = models.CharField(max_length=256)
+    trained = models.BooleanField(default=False)
+    created_datetime = models.DateTimeField(auto_now_add=True)
+    edited_datetime = models.DateTimeField(auto_now=True)
+
