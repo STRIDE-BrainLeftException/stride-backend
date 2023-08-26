@@ -54,25 +54,39 @@ class PriceCalculationView(APIView):
             )
         except Exception as e:
             return Response({"error": str(e)}, status=400)
-        
-    
+
+
 class TumorDetectionViewSet(viewsets.ModelViewSet):
-    queryset = TumorDetection.objects.all().order_by('-created_datetime')
+    queryset = TumorDetection.objects.all().order_by("-created_datetime")
     serializer_class = TumorDetectionSerializer
     permission_classes = [permissions.AllowAny]
 
-
     @action(detail=False, methods=["POST"])
-    def run_detection(self,request,*args, **kwargs):
+    def run_detection(self, request, *args, **kwargs):
         try:
-             return Response({"success":True, "result": True})
+            serializer = TumorDetectionSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                tumor_detection = TumorDetection.objects.get(
+                    id=serializer.data.get("id")
+                )
+                tumor_detection_id = tumor_detection.id
+                detection_class = tumor_detection.detection_class
+                return Response(
+                    {
+                        "success": True,
+                        "result": True,
+                        "tumor_detection_id": tumor_detection_id,
+                        "detection_class": detection_class,
+                    }
+                )
+            return Response({"success": True, "result": True})
         except:
-            return Response({"success":False, "result": True})
-    
-    @action(detail=True, methods=["POST"])
-    def provide_detected_feedback(self,request,*args, **kwargs):
-        try:
-             return Response({"success":True, "result": True})
-        except:
-            return Response({"success":False, "result": True})
+            return Response({"success": False, "result": True})
 
+    @action(detail=True, methods=["POST"])
+    def provide_detected_feedback(self, request, *args, **kwargs):
+        try:
+            return Response({"success": True, "result": True})
+        except:
+            return Response({"success": False, "result": True})
