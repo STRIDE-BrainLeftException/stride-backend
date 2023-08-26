@@ -15,7 +15,7 @@ def perform_detection(file):
     # img = image.img_to_array(img)
     # img = img / 255
     try:
-        model = tf.keras.models.load_model("model.h5")
+        model = tf.keras.models.load_model("models/rootcode_model.h5")
         image_size = (150, 150)
         # Load and preprocess the image
         image = load_img(file, target_size=image_size)
@@ -47,3 +47,21 @@ def perform_detection(file):
     except Exception as e:
         print(e)
         return "Benign"
+
+
+def retrain(file, label):
+    X, y = load_dataset()
+    new_data = load_and_preprocess_file(file)
+    X = np.vstack((X, new_data))
+    y = np.append(y, label)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42
+    )
+    model = SVC(kernel="linear")
+    model.fit(X_train, y_train)
+    trained_model_filename = "trained_model.pkl"
+    joblib.dump(model, trained_model_filename)
+    model_entry = ModelEntry.objects.get(pk=model_id)
+    model_entry.label = label
+    model_entry.save()
+    return trained_model_filename
